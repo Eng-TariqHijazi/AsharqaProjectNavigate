@@ -1,9 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import About from "../screens/About/About";
+import Contact from "../screens/Contact/Contact";
+import List from "../screens/HomeList/List";
 import { Entypo } from "@expo/vector-icons";
-import List from "../../screens/HomeList/List";
-import About from "../../screens/About/About";
-import Contact from "../../screens/Contact/Contact";
 import { AntDesign } from "@expo/vector-icons";
+
 const Tab = createBottomTabNavigator();
 export default function BottomStack() {
   return (
@@ -23,7 +24,7 @@ export default function BottomStack() {
         component={List}
       />
       <Tab.Screen
-       options={{
+        options={{
           tabBarIcon: ({ focused }) => (
             <Entypo
               name="phone"
@@ -34,7 +35,7 @@ export default function BottomStack() {
           tabBarLabel: "تواصل معنا",
         }}
         name="About"
-        component={About}
+        component={Contact}
       />
       <Tab.Screen
         options={{
@@ -48,7 +49,7 @@ export default function BottomStack() {
           tabBarLabel: "من نحن",
         }}
         name="Contact"
-        component={Contact}
+        component={About}
       />
     </Tab.Navigator>
   );

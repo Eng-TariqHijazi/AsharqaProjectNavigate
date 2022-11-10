@@ -8,19 +8,9 @@ import {
   import Styles from './Styles'
   import { useFonts } from "expo-font";
   import { StatusBar } from "expo-status-bar";
-  export default function ProjectAsharqiaP4() {
-    const Header = () => {
-      return (
-        <ImageBackground
-          resizeMode="cover"
-          source={require("../../../assets/image.png")}
-          style={Styles.header}
-        >
-          <StatusBar style="auto" />
-          <Text style={Styles.headerText}>تواصل معنا </Text>
-        </ImageBackground>
-      );
-    };
+import { Header } from "../HomeList/List";
+  export default function Contact() {
+   
     const [cairo] = useFonts({
       Cairo: require("../../../assets/fonts/Cairo-VariableFont_wght.ttf"),
       CairoBold: require("../../../assets/fonts/static/Cairo-Bold.ttf"),
@@ -31,7 +21,7 @@ import {
     if (!cairo) return null;
     return (
       <View style={Styles.container}>
-        <Header />
+        <Header title={'تواصل معنا'} />
         <ImageBackground
           source={require("../../../assets/imag/scan1.png")}
           style={Styles.scan}
